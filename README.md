@@ -1,97 +1,120 @@
-**Express + GraphQL API Server
-**
-This is a sample Node.js server using Express and GraphQL, exposing both REST and GraphQL APIs to work with mock data for users, posts, and comments. It's great for understanding how to build hybrid API services.
+# **Express + GraphQL API Server**
 
+This is a sample **Node.js server** using **Express** and **GraphQL**, exposing both **REST** and **GraphQL APIs** to work with mock data for users, posts, and comments.  
+It’s great for understanding how to build hybrid APIs and explore both REST and GraphQL side-by-side!
 
-**🚀 Features
-**
-✅ REST API endpoints to fetch users, posts, and comments
+---
 
-✅ GraphQL API with nested data queries
+## **🚀 Features**
 
-✅ In-memory mock data (no database)
+- **✅ REST API** endpoints to fetch users, posts, and comments
+- **✅ GraphQL API** with nested data queries
+- **✅ In-memory mock data** (no database required)
+- **✅ CORS** and **JSON** support out-of-the-box
+- **✅ GraphiQL IDE** for easy GraphQL testing
 
-✅ CORS and JSON support
+---
 
-✅ GraphiQL IDE for easy GraphQL testing
+## **📁 Project Structure**
 
-
-**📁 Project Structure
-**.
+```
+.
 ├── server.js          # Main server file
 ├── package.json       # Project dependencies
 └── README.md          # Documentation
+```
 
+---
 
-📦 Setup Instructions
-✅ Prerequisites
+## **📦 Setup Instructions**
 
-Node.js (v14 or later)
+### **Prerequisites**
 
-npm
+- **Node.js** (v14 or later)
+- **npm**
 
-📥 Install Dependencies
+### **Install Dependencies**
+
+```bash
 npm install
+```
 
-▶️ Start the Server
+### **Start the Server**
+
+```bash
 node server.js
-
+```
 
 You’ll see:
 
-Server is running on http://localhost:4000
-GraphQL endpoint available at http://localhost:4000/graphql
+- **Server is running on:** [http://localhost:4000](http://localhost:4000)
+- **GraphQL endpoint:** [http://localhost:4000/graphql](http://localhost:4000/graphql)
 
-🧠 Data Overview
+---
 
-This project uses hardcoded mock data:
+## **🧠 Data Overview**
 
-👤 Users
+This project uses **hardcoded mock data**:
+
+### 👤 **Users**
+```js
 [
   { id: 1, name: "Alice", email: "alice@example.com" },
   { id: 2, name: "Bob", email: "bob@example.com" }
 ]
+```
 
-📝 Posts
+### 📝 **Posts**
+- Each post includes: `userId`, `title`, `body`, and `createdAt`.
 
-Each post includes userId, title, body, and createdAt.
+### 💬 **Comments**
+- Each comment includes: `postId`, `author`, and `text`.
 
-💬 Comments
+---
 
-Each comment includes postId, author, and text.
+## **🔗 REST API Endpoints**
 
-🔗 REST API Endpoints
-Get user by ID
-
+### **Get user by ID**
+```
 GET /users/:id
-
-Example:
-
+```
+**Example:**
+```bash
 curl http://localhost:4000/users/1
+```
 
-Get posts for a user
+---
 
+### **Get posts for a user**
+```
 GET /users/:id/posts
-
-Example:
-
+```
+**Example:**
+```bash
 curl http://localhost:4000/users/1/posts
+```
 
-Get comments for a post
+---
 
+### **Get comments for a post**
+```
 GET /posts/:id/comments
-
-Example:
-
+```
+**Example:**
+```bash
 curl http://localhost:4000/posts/101/comments
+```
 
-🧪 GraphQL API
+---
 
-Access GraphQL IDE at:
-👉 http://localhost:4000/graphql
+## **🧪 GraphQL API**
 
-Example Queries
-1. Get a user with their posts and comments
+- **Access GraphQL IDE:** [http://localhost:4000/graphql](http://localhost:4000/graphql)
+
+### **Example Queries**
+
+**1. Get a user with their posts and comments**
+```graphql
 {
   user(id: 1) {
     id
@@ -108,8 +131,10 @@ Example Queries
     }
   }
 }
+```
 
-2. Get a post with its comments
+**2. Get a post with its comments**
+```graphql
 {
   post(id: 101) {
     title
@@ -121,8 +146,10 @@ Example Queries
     }
   }
 }
+```
 
-3. Get a single comment
+**3. Get a single comment**
+```graphql
 {
   comment(id: 1001) {
     id
@@ -131,21 +158,23 @@ Example Queries
     text
   }
 }
+```
 
-🛠️ Built With
+---
 
-Node.js
+## **🛠️ Built With**
 
-Express.js
+- **Node.js**
+- **Express.js**
+- **GraphQL**
+- **express-graphql**
+- **CORS**
 
-GraphQL
+---
 
-express-graphql
+## **📌 Notes**
 
-CORS
+- **Data is stored in-memory.** No external database required.
+- **Ideal for learning** GraphQL, Express, and REST side-by-side!
 
-📌 Notes
-
-Data is stored in-memory, no external DB.
-
-Ideal for learning GraphQL, Express, and REST side-by-side.
+---
