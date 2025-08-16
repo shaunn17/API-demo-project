@@ -13,16 +13,6 @@ It’s great for understanding how to build hybrid APIs and explore both REST an
 - **✅ CORS** and **JSON** support out-of-the-box
 - **✅ GraphiQL IDE** for easy GraphQL testing
 
----
-
-## **📁 Project Structure**
-
-```
-.
-├── server.js          # Main server file
-├── package.json       # Project dependencies
-└── README.md          # Documentation
-```
 
 ---
 
