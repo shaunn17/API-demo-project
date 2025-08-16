@@ -1,9 +1,10 @@
-Express + GraphQL API Server
-
+**Express + GraphQL API Server
+**
 This is a sample Node.js server using Express and GraphQL, exposing both REST and GraphQL APIs to work with mock data for users, posts, and comments. It's great for understanding how to build hybrid API services.
 
-🚀 Features
 
+**🚀 Features
+**
 ✅ REST API endpoints to fetch users, posts, and comments
 
 ✅ GraphQL API with nested data queries
@@ -14,11 +15,13 @@ This is a sample Node.js server using Express and GraphQL, exposing both REST an
 
 ✅ GraphiQL IDE for easy GraphQL testing
 
-📁 Project Structure
-.
+
+**📁 Project Structure
+**.
 ├── server.js          # Main server file
 ├── package.json       # Project dependencies
 └── README.md          # Documentation
+
 
 📦 Setup Instructions
 ✅ Prerequisites
